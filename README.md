@@ -136,4 +136,3 @@ SARIF output can be uploaded to GitHub Code Scanning via the `github/codeql-acti
 ## License
 
 MIT
-
