@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx:1.25-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+    networks:
+      - frontend
+
+  api:
+    image: myorg/api-server:latest
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgres://db:5432/app
+      JWT_SECRET: change-me-in-production
+    depends_on:
+      - db
+      - cache
+    networks:
+      - frontend
+      - backend
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: supersecret
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  cache:
+    image: redis:7-alpine
+    networks:
+      - backend
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local

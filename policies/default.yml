@@ -1,0 +1,30 @@
+# Default policy for explainable risk scoring.
+minimum_severity: info
+minimum_score_to_report: 0
+
+scoring:
+  likelihood_factor: 0.6
+  impact_factor: 0.4
+  weights:
+    likelihood:
+      internet_exposed: 5.0
+      no_auth: 4.0
+      weak_auth: 3.0
+      privileged_container: 4.0
+      wide_network_access: 2.0
+    impact:
+      handles_pii: 4.0
+      writes_to_db: 3.0
+      admin_scope: 5.0
+      availability_critical: 4.0
+
+build:
+  # Set to <=100 to fail CI when non-allowlisted threats exceed threshold.
+  fail_on_score_gte: 101
+  allowlist_patterns: []
+
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 4096

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-threat-model"
+version = "0.1.0"
+description = "Automated threat model generation from IaC, K8s manifests, and API specs."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Oluwafemi Oroyemi"},
+]
+
+dependencies = [
+    "pyyaml>=6.0",
+    "reportlab>=4.0",
+    "openai>=1.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "bandit>=1.7",
+    "safety>=3.0",
+]
+
+[project.scripts]
+ai-threat-model = "src.cli:main"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "S", "B"]
+ignore = ["S101"]  # allow assert in tests
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

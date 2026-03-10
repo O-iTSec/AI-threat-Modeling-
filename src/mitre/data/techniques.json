@@ -1,0 +1,92 @@
+[
+  {
+    "id": "T1190",
+    "name": "Exploit Public-Facing Application",
+    "tactics": ["Initial Access"],
+    "url": "https://attack.mitre.org/techniques/T1190/"
+  },
+  {
+    "id": "T1078",
+    "name": "Valid Accounts",
+    "tactics": ["Initial Access", "Persistence", "Privilege Escalation", "Defense Evasion"],
+    "url": "https://attack.mitre.org/techniques/T1078/"
+  },
+  {
+    "id": "T1110",
+    "name": "Brute Force",
+    "tactics": ["Credential Access"],
+    "url": "https://attack.mitre.org/techniques/T1110/"
+  },
+  {
+    "id": "T1098",
+    "name": "Account Manipulation",
+    "tactics": ["Persistence", "Privilege Escalation"],
+    "url": "https://attack.mitre.org/techniques/T1098/"
+  },
+  {
+    "id": "T1562",
+    "name": "Impair Defenses",
+    "tactics": ["Defense Evasion"],
+    "url": "https://attack.mitre.org/techniques/T1562/"
+  },
+  {
+    "id": "T1070",
+    "name": "Indicator Removal",
+    "tactics": ["Defense Evasion"],
+    "url": "https://attack.mitre.org/techniques/T1070/"
+  },
+  {
+    "id": "T1005",
+    "name": "Data from Local System",
+    "tactics": ["Collection"],
+    "url": "https://attack.mitre.org/techniques/T1005/"
+  },
+  {
+    "id": "T1041",
+    "name": "Exfiltration Over C2 Channel",
+    "tactics": ["Exfiltration"],
+    "url": "https://attack.mitre.org/techniques/T1041/"
+  },
+  {
+    "id": "T1499",
+    "name": "Endpoint Denial of Service",
+    "tactics": ["Impact"],
+    "url": "https://attack.mitre.org/techniques/T1499/"
+  },
+  {
+    "id": "T1498",
+    "name": "Network Denial of Service",
+    "tactics": ["Impact"],
+    "url": "https://attack.mitre.org/techniques/T1498/"
+  },
+  {
+    "id": "T1068",
+    "name": "Exploitation for Privilege Escalation",
+    "tactics": ["Privilege Escalation"],
+    "url": "https://attack.mitre.org/techniques/T1068/"
+  },
+  {
+    "id": "T1548",
+    "name": "Abuse Elevation Control Mechanism",
+    "tactics": ["Privilege Escalation", "Defense Evasion"],
+    "url": "https://attack.mitre.org/techniques/T1548/"
+  },
+  {
+    "id": "T1611",
+    "name": "Escape to Host",
+    "tactics": ["Privilege Escalation"],
+    "url": "https://attack.mitre.org/techniques/T1611/"
+  },
+  {
+    "id": "T1530",
+    "name": "Data from Cloud Storage",
+    "tactics": ["Collection"],
+    "url": "https://attack.mitre.org/techniques/T1530/"
+  },
+  {
+    "id": "T1552",
+    "name": "Unsecured Credentials",
+    "tactics": ["Credential Access"],
+    "url": "https://attack.mitre.org/techniques/T1552/"
+  }
+]
