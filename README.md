@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AI Threat Model
 
 Automated threat model generation from infrastructure-as-code, Kubernetes manifests, and API specifications — powered by STRIDE analysis, MITRE ATT&CK mapping, and LLM-enhanced insights.
@@ -138,5 +137,4 @@ SARIF output can be uploaded to GitHub Code Scanning via the `github/codeql-acti
 
 MIT
 =======
-# AI-threat-Modeling-
->>>>>>> a5581eb607c1a674797ecb49d6a0e2109509e26e
+
